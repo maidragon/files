@@ -1,0 +1,13 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: whoami
+  namespace: default
+spec:
+  rules:
+  - host: whoami.marisa.im
+    http:
+      paths:
+      - backend:
+          serviceName: whoami
+          servicePort: 80
